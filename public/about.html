@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#111217" />
+  <title>About Three-Body Chaos</title>
+  <meta name="description" content="A tiny space handheld that decides small things for you, like white shirt or black shirt. Built by @maangostin." />
+  <meta property="og:title" content="About Three-Body Chaos" />
+  <meta property="og:description" content="A tiny space handheld that decides small things for you. Built by @maangostin." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,400&family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23000'/%3E%3Ccircle cx='10' cy='11' r='3.2' fill='%23ffe45a'/%3E%3Ccircle cx='23' cy='13' r='3.2' fill='%238cb4ff'/%3E%3Ccircle cx='15' cy='23' r='3.2' fill='%23ff6448'/%3E%3C/svg%3E" />
+  <style>
+    :root {
+      --page: #111217; --page-glow: #262932;
+      --paper: #e9ecf8; --mute: rgba(233, 236, 248, .68); --hair: rgba(233, 236, 248, .14);
+      --blue: #8aa0f2; --magenta: #e06ea2;
+      --body: "Nunito", "Helvetica Neue", Arial, sans-serif;
+      --pixel: "Press Start 2P", ui-monospace, Menlo, monospace;
+      color-scheme: dark;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0; color: var(--paper); font: 400 17px/1.75 var(--body);
+      background: radial-gradient(ellipse at 50% 0%, var(--page-glow), var(--page) 62%) fixed, var(--page);
+      padding: calc(20px + env(safe-area-inset-top)) 20px calc(56px + env(safe-area-inset-bottom));
+    }
+    main { max-width: 36rem; margin: 0 auto; }
+    a { color: var(--magenta); text-underline-offset: 3px; }
+    a:hover, a:focus-visible { color: #f4a3c6; }
+    .back { display: inline-flex; align-items: center; min-height: 44px; color: var(--mute); text-decoration: none; font-size: 15px; }
+    .back:hover, .back:focus-visible { color: var(--paper); }
+    h1, h2 { font-family: var(--pixel); font-weight: 400; line-height: 1.6; margin: 0 0 22px; }
+    h1 { font-size: 17px; margin-top: 28px; color: var(--paper); }
+    h2 { font-size: 12px; color: var(--blue); }
+    p { margin: 0 0 18px; }
+    em { font-style: italic; }
+    .links { list-style: none; padding: 0; margin: 22px 0 0; }
+    .links li { margin: 4px 0; }
+    .links a { text-decoration: none; }
+    .links a:hover, .links a:focus-visible { text-decoration: underline; }
+    .soon { color: var(--mute); }
+    hr { border: 0; height: 1px; background: var(--hair); margin: 44px 0; }
+    figure { margin: 24px 0; }
+    figure img { display: block; width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--hair); background: #1a1c24; }
+    figcaption { margin-top: 8px; font-size: 13px; line-height: 1.5; color: var(--mute); }
+    a.thumb { display: block; }
+    a.thumb:hover img, a.thumb:focus-visible img { border-color: var(--magenta); }
+    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0; }
+    .pair figure { margin: 0; }
+    .pair img { aspect-ratio: 4 / 3; object-fit: cover; }
+    footer { margin-top: 56px; text-align: center; color: var(--mute); font-size: 14px; }
+    footer .mark { display: block; font: 400 12px/1.6 var(--pixel); letter-spacing: .04em; color: var(--paper); margin-bottom: 10px; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="/">← Three-Body Chaos</a>
+
+    <section>
+      <h1>ABOUT ME</h1>
+      <p>Hi, I’m Agustin.</p>
+      <p>I’m an environmental engineer from Argentina. I build small things on my computer and make videos about science, and I post both as Mangostin (@maangostin). Social media isn’t my strong suit, but I keep at it.</p>
+      <p>This app is a toy. It’s not going to save the planet, I just really wanted to make it.</p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>WHERE IT CAME FROM</h2>
+      <p>It started with a video of Neil deGrasse Tyson explaining the three-body problem.</p>
+      <figure>
+        <a class="thumb" href="https://www.youtube.com/watch?v=6GfIDwwxfsM" target="_blank" rel="noopener noreferrer">
+          <img src="/media/about/ndt-unsolvable.jpg" width="640" height="360" alt="Neil deGrasse Tyson and his co-host on a video thumbnail titled Why It’s Unsolvable, with Isaac Newton and three stars tangled in loops on a scroll" loading="lazy" decoding="async" />
+        </a>
+        <figcaption>The video that got me going. <a href="https://www.youtube.com/watch?v=6GfIDwwxfsM" target="_blank" rel="noopener noreferrer">Watch it on YouTube.</a></figcaption>
+      </figure>
+      <p>The idea is simple. Take two things that pull on each other, like the Earth and the Moon, and the math works out perfectly. You can know where they’ll be forever. Isaac Newton figured that out.</p>
+      <p>Now add a third one and it falls apart. There’s no formula for it. If you nudge one of them by a tiny amount, everything that happens afterwards is different, so the only way to find out is to run it and watch.</p>
+      <p>Neil says it usually ends one of two ways: two of them crash into each other, or one of them gets thrown out. I liked that a lot, because it means every run has a clear ending. I wanted to press a button and see it happen.</p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>THE GAME BOY PART</h2>
+      <p>The look of the app comes from when I was a kid. I played a lot of Game Boy and Game Boy Color, and Pokémon Crystal and Kirby’s Dream Land 2 are the two games I remember the most.</p>
+      <div class="pair">
+        <figure>
+          <img src="/media/about/pokemon-crystal.webp" width="600" height="450" alt="A Pokémon Crystal screenshot: the trainer walking through a dark forest, with a Celebi in the corner" loading="lazy" decoding="async" />
+          <figcaption>Pokémon Crystal</figcaption>
+        </figure>
+        <figure>
+          <img src="/media/about/kirby-gb.png" width="640" height="480" alt="A Kirby screenshot on the Game Boy&rsquo;s green screen, with Kirby between two stars" loading="lazy" decoding="async" />
+          <figcaption>Kirby, Game Boy style</figcaption>
+        </figure>
+      </div>
+      <p>I also loved finding secrets in those games, the weird button combinations nobody tells you about. So I put some in. There are a few hidden orbits in the app (real ones, worked out by physicists, and one of them is a figure-eight) and you unlock them by pressing the D-pad in the right order. I’m not telling you the codes.</p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>WHAT IT’S FOR</h2>
+      <p>What I actually want is for you to use it for the small decisions that eat up your day. White shirt or black shirt. Vanilla or pistachio. Pizza or tacos.</p>
+      <p>Here’s how I play it. Decide what each star means: yellow is one option, blue is another, red is a third. Press RUN and let gravity sort it out. The star that ends up on its own wins. That’s either the one that gets thrown out or the one that stays out of the crash. If a black hole shows up, nobody wins and you should order something else.</p>
+      <p>Only two options? Make the third star a wildcard, like “wear a hoodie” or “skip dessert”.</p>
+      <p>It’s real physics running in your browser, so nothing is rigged. And if you don’t like the answer, move one star a little and run it again. It might come out different. That’s a bit of cheating, but it’s your shirt.</p>
+      <p>That’s the whole thing. Next time you can’t decide, give it a go.</p>
+      <ul class="links">
+        <li><a href="https://instagram.com/maangostin" target="_blank" rel="noopener noreferrer">→ Instagram</a></li>
+        <li class="soon">→ Newsletter (coming soon)</li>
+      </ul>
+    </section>
+
+    <footer>
+      <a class="mark" href="/">THREE-BODY CHAOS</a>
+      built by <a href="https://instagram.com/maangostin" target="_blank" rel="noopener noreferrer">@maangostin</a>
+    </footer>
+  </main>
+</body>
+</html>

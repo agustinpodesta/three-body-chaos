@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Three-Body Chaos</title>
+    <meta name="description" content="Place three stars, let gravity decide. A pocket three-body simulator: every run ends in a collision or an escape." />
+    <meta property="og:title" content="Three-Body Chaos" />
+    <meta property="og:description" content="Place three stars, let gravity decide. Every run ends in a collision or an escape." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#111217" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23000'/%3E%3Ccircle cx='10' cy='11' r='3.2' fill='%23ffe45a'/%3E%3Ccircle cx='23' cy='13' r='3.2' fill='%238cb4ff'/%3E%3Ccircle cx='15' cy='23' r='3.2' fill='%23ff6448'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,800;1,900&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="stage">
+      <div class="device" id="device">
+        <!-- Decorative shoulder buttons, peeking out behind the top edge. -->
+        <span class="shoulder shoulder-l" aria-hidden="true"></span>
+        <span class="shoulder shoulder-r" aria-hidden="true"></span>
+
+        <div class="led-wrap" aria-hidden="true">
+          <span class="led on" id="led"></span>
+          <span class="led-label">POWER</span>
+        </div>
+
+        <section class="bezel">
+          <div class="screen" id="screen">
+            <canvas
+              id="c"
+              width="600"
+              height="600"
+              role="img"
+              aria-label="Star field. Tap to place three stars, then press Run."
+            ></canvas>
+            <div class="hud">
+              <div class="banner" id="banner" aria-live="polite">
+                <div class="banner-title" id="bannerTitle"></div>
+                <div class="banner-sub" id="bannerSub"></div>
+              </div>
+              <div class="status" id="status" aria-live="polite"></div>
+            </div>
+          </div>
+          <div class="brand" aria-hidden="true">
+            <span class="brand-a">THREE-BODY</span><span class="brand-b">CHAOS</span>
+          </div>
+        </section>
+
+        <div class="dpad-well" id="dpadWell" aria-hidden="true"></div>
+        <div class="dpad" id="dpad" aria-hidden="true">
+          <span class="dpad-cross"></span>
+          <span class="dpad-arm" data-dir="up"></span>
+          <span class="dpad-arm" data-dir="down"></span>
+          <span class="dpad-arm" data-dir="left"></span>
+          <span class="dpad-arm" data-dir="right"></span>
+        </div>
+
+        <!-- Decorative START / SELECT-style buttons (unlabelled, dark plastic). -->
+        <span class="pill pos-select" aria-hidden="true"></span>
+        <span class="pill pos-start" aria-hidden="true"></span>
+
+        <!-- The three functional buttons: same magenta plastic, each in its own recessed well. -->
+        <span class="fwell pos-random" aria-hidden="true"></span>
+        <span class="fwell pos-run" aria-hidden="true"></span>
+        <span class="fwell pos-clear" aria-hidden="true"></span>
+        <button class="fbtn pos-random" id="randomBtn" type="button" title="Randomize &amp; run (R)" aria-label="Randomize and run">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="5" y="5" width="14" height="14" rx="3" />
+            <circle class="pip" cx="9.3" cy="9.3" r="1.2" />
+            <circle class="pip" cx="14.7" cy="14.7" r="1.2" />
+            <circle class="pip" cx="12" cy="12" r="1.2" />
+          </svg>
+        </button>
+        <button class="fbtn pos-run" id="runBtn" type="button" title="Run (Enter)" aria-label="Run">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="solid" d="M9 6.5v11l9-5.5z" /></svg>
+        </button>
+        <button class="fbtn pos-clear" id="clearBtn" type="button" title="Clear (Esc)" aria-label="Clear placement">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17" /></svg>
+        </button>
+        <span class="flabel pos-random">RANDOM</span>
+        <span class="flabel pos-run">RUN</span>
+        <span class="flabel pos-clear">CLEAR</span>
+
+        <!-- Decorative. -->
+        <div class="speaker" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <footer class="credit">
+        <span>MADE BY <a href="https://instagram.com/maangostin" target="_blank" rel="noopener noreferrer">@MAANGOSTIN</a></span>
+        <span class="credit-dot" aria-hidden="true">·</span>
+        <a href="/about.html">ABOUT</a>
+      </footer>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
